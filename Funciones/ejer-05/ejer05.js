@@ -1,0 +1,1 @@
+let numero = parseInt (prompt("Ingrese un número entero:"));
