@@ -1,51 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/css.css" />
-    <script src="js/js.js"></script>
-
     <title>Calculadora PRO</title>
+    <link rel="stylesheet" href="css/css.css" />
+    <script src="js/js.js" defer></script>
   </head>
+
   <body>
     <div class="calculadora">
-        
-        <input type="text" name="text" id="text" readonly>
-        
-      <table>
-        <tr>
-          <td>AC</td>
-          <td>C</td>
-          <td>2^</td>
-          <td>/</td>
-        </tr>
-        <tr>
-          <td class="impar">7</td>
-          <td class="par">8</td>
-          <td class="impar">9</td>
-          <td>*</td>
-        </tr>
-        <tr>
-          <td class="par">4</td>
-          <td class="impar">5</td>
-          <td class="par">6</td>
-          <td>-</td>
-        </tr>
-        <tr>
-          <td class="impar">1</td>
-          <td class="par">2</td>
-          <td class="impar">3</td>
-          <td>+</td>
-        </tr>
-        <table>
-          <tr>
-            <td class="cero">0</td>
-            <td class="punto">.</td>
-            <td class="igual">=</td>
-          </tr>
-        </table>
-      </table>
+      <h1>Calculadora PRO</h1>
+      <input type="text" id="text" readonly />
+
+      <div class="botones">
+        <button class="borrar" onclick="borrar()">AC</button>
+        <button class="func" onclick="elevar()">x²</button>
+        <button class="operador" onclick="ponerOperador('/')">/</button>
+
+        <button onclick="ponerNumero('7')">7</button>
+        <button onclick="ponerNumero('8')">8</button>
+        <button onclick="ponerNumero('9')">9</button>
+        <button class="operador" onclick="ponerOperador('*')">*</button>
+
+        <button onclick="ponerNumero('4')">4</button>
+        <button onclick="ponerNumero('5')">5</button>
+        <button onclick="ponerNumero('6')">6</button>
+        <button class="operador" onclick="ponerOperador('-')">-</button>
+
+        <button onclick="ponerNumero('1')">1</button>
+        <button onclick="ponerNumero('2')">2</button>
+        <button onclick="ponerNumero('3')">3</button>
+        <button class="operador" onclick="ponerOperador('+')">+</button>
+
+        <button class="cero" onclick="ponerNumero('0')">0</button>
+        <button onclick="ponerNumero('.')">.</button>
+        <button class="igual" onclick="calcular()">=</button>
+
+      </div>
     </div>
   </body>
 </html>
